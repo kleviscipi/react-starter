@@ -1,11 +1,11 @@
 import { combineReducers } 	from 'redux';
-import global 				from './global';
+import start 				from './start';
 
 import messages 			from './messages';
 import validate 			from './validate';
 
 export default combineReducers({
-  global,
+  start,
   messages,
   validate
 });

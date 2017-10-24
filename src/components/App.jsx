@@ -7,7 +7,10 @@ import Footer 	from './partials/Footer.jsx';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux'
 import Loading 		from 'react-loading';
-import { getSession } from '../actions/global.js';
+import { initSession } from '../actions/start.js';
+
+import { matchRoutes, renderRoutes } from 'react-router-config'
+
 
 /***INCLUDE BOOTSTRAP***/
 
@@ -30,12 +33,14 @@ class App extends React.Component {
 	}
 	
 	render() {
-	
+		const { route, location } = this.props;
 		return (
 
-				<div className="vbox">
+				<div>
 					<Header />
-						{this.props.children}
+						<div className="container">
+							{renderRoutes(route.routes)}
+						</div>
 					<Footer />
 				</div>
 		)

@@ -1,4 +1,4 @@
-export default function curriculum(state = {}, action) {
+export default function start(state = {}, action) {
   switch (action.type) {
     case 'GET_SESSION':
 		return Object.assign({}, state, {

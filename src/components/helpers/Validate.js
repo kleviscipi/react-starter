@@ -1,6 +1,6 @@
 //genereate messages for validation
-//@param1 eventi generati on change 
-//@param2 tipo del controllo in base al switch case
+//@param1 events generatet on change 
+//@param2 type of control
 //@param3 experimental (not used)
 export function messagesValidate(event={},type,customvalue = false){
 	const msg = {}
@@ -11,7 +11,7 @@ export function messagesValidate(event={},type,customvalue = false){
 		case 'isEmpty':
 			if(value.trim()==""){
 
-				var txt_empty = "Il campo  in roso è obligatorio !";
+				var txt_empty = "This field is empty!";
 				msg[event.name] = {error:1,classname:'parsley-error',message:txt_empty};
 
 			}else{
@@ -23,7 +23,7 @@ export function messagesValidate(event={},type,customvalue = false){
 		case 'isEmail':
 
 			if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-				var txt_email = "Email non valido";
+				var txt_email = "Email is not valid!";
 				msg[event.name] = {error:1,classname:'parsley-error',message:txt_email};
 	  		}else{
 				msg[event.name] = {classname:'',error:0,message:''};
@@ -35,7 +35,7 @@ export function messagesValidate(event={},type,customvalue = false){
 
 			if(isNaN(Number(value))){
 
-				var txt_number = "Devi inserire solo numeri!";
+				var txt_number = "Just numbers!";
 				msg[event.name] = {error:1,classname:'parsley-error',message:txt_number};
 			}else{
 				msg[event.name] = {classname:'',error:0,message:''};
@@ -46,21 +46,9 @@ export function messagesValidate(event={},type,customvalue = false){
 		case 'is6length':
 			if(value.length < 6) {
 
-				var txt_6length = "DEvi inserire almeno 6 charateri";
+				var txt_6length = "6 characters minimun";
 				msg[event.name] = {error:1,classname:'parsley-error',message:txt_6length};
 
-			}else{
-				msg[event.name] = {classname:'',error:0,message:''};
-			}
-
-
-		break;
-
-		case 'hasTipologia2':
-		
-			if(customvalue == 2 ||  customvalue == -1) {
-				var txt_2tipo = "E obligatorio scegliere una agenzia";
-				msg[event.name] = {error:1,classname:'parsley-error',message:txt_2tipo};
 			}else{
 				msg[event.name] = {classname:'',error:0,message:''};
 			}
@@ -226,56 +214,7 @@ export function ValidateSingle(event = new Array,single){
 		disabled
 	}
 }
-//VALIDA A SINGLE VALUE RETURN  TRUE OR FALSE
-//EXAMPLE
-//@param1: il valore
-//@param 2 : il tipo di controlo in base al switch case
-/* valid(value,'isEmpty') */
 
-export function valid(values,type){
-	switch(type){
-		case 'isEmpty':
-			if(!values.trim()){
-				return false;
-			}else{
-				return true;
-			}
-
-		break;
-
-		case 'isEmail':
-
-			if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values)) {
-				return false;
-	  		}else{
-	  			return true;
-	  		}
-
-		break;
-
-		case 'isNumber':
-
-			if(isNaN(Number(values))){
-				return false;
-			}else{
-				return true;
-			}
-
-		break;
-
-		case 'is6length':
-			if(values.length < 6) {
-				return true;
-			}else{
-				return false;
-			}
-
-
-		break;
-
-	}
-
-}
 
 
 

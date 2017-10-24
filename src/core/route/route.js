@@ -11,22 +11,35 @@ export const getRouteData = (location) => {
 
 export const createRoutes = () => {
 	return [
-		{ 
-			component: Component.Layout.App,
-			path: '/:rt',
-			routes: [
 				{ 
-					component: Component.Pages.Login,
-					path: '/login',
+					path:'/home',
+					component: Component.Layout.App,
+					routes:[
+							{
+								component: Component.Module.Users.Profile,
+								path: '/home/profile',
+								exact:true,
 
+							},
+						    { 	path: '/home/profile/:id',
+						        component:Component.Module.Users.Profile,
+						    },
+							{
+								component: Component.Pages.NotFound
+							}
+					]
+
+				},
+				{
+					path:'/login',
+					component: Component.Pages.Login,
+				},
+				{
+					path:'/singup',
+					component: Component.Pages.Singup,
 				},
 				{
 					component: Component.Pages.NotFound
 				}
-			],
-		},
-		{
-			component: Component.Pages.NotFound
-		}
 	];
 }
