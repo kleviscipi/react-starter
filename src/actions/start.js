@@ -47,20 +47,33 @@ export function login(values) {
 	
   return (dispatch) => {
 
-  		if(values.username == 'klevis' && values.email=='cipiklevis@gmail.com'){
+  		if(values.password == '123456' && values.email=='cipiklevis@gmail.com'){
 
 			dispatch({
-				type: 'SET_SESSION',
-				session: true
+				type: 'LOGIN_SUCCESS',
+				logged: true
 		 	});
 
+			dispatch({
+				type: 'SUCCESS_MESSAGES',
+				messages: ['Logged successfully']
+		 	});
   		}else{
 
 			dispatch({
-				type: 'CANCEL_SESSION',
-				session: false
+				type: 'LOGIN_FALURE',
+				logged: false
 		 	});
+
+			dispatch({
+				type: 'ERROR_MESSAGES',
+				messages: ['Email or password wrong!']
+		 	});
+		dispatch({
+			type: 'CLEAR_MESSAGES',
+	 	});
   		}
+
 
   };
   

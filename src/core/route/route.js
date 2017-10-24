@@ -12,12 +12,13 @@ export const getRouteData = (location) => {
 export const createRoutes = () => {
 	return [
 				{ 
-					path:'/home',
+					path:'/',
+					exact:true,
 					component: Component.Layout.App,
 					routes:[
 							{
-								component: Component.Module.Users.Profile,
-								path: '/home/profile',
+								component: Component.Pages.Home,
+								path: '/',
 								exact:true,
 
 							},

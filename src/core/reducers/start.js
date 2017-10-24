@@ -1,19 +1,18 @@
 export default function start(state = {}, action) {
   switch (action.type) {
-    case 'GET_SESSION':
+	
+	case 'LOGIN_SUCCESS':
 		return Object.assign({}, state, {
-			session: action.session[0],
-			loadingApp: false,
-			login_redirect: false
+			logged:action.logged
 		});
 	break;
-	
-	case 'LOGIN_REDIRECT':
+
+	case 'LOGIN_FALURE':
 		return Object.assign({}, state, {
-			login_redirect:true
+			logged:action.logged
 		});
-	break;
-	
+	break;	
+
     default:
 		return state;
   }

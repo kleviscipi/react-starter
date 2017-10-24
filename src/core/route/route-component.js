@@ -3,7 +3,7 @@
 import App 		from '../../components/App.jsx'
 
 //Pages
-
+import Home 		from '../../components/Home.jsx'
 import Login 		from '../../components/pages/Login.jsx'
 import Singup 		from '../../components/pages/Singup.jsx'
 import NotFound 	from '../../components/NotFound.jsx';
@@ -21,6 +21,7 @@ let Component =  {
 	Pages:{
 		Login,
 		Singup,
+		Home,
 		NotFound 
 	},
 
