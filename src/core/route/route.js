@@ -32,6 +32,7 @@ export const createRoutes = () => {
 
 				},
 				{
+
 					path:'/login',
 					component: Component.Pages.Login,
 				},

@@ -13,6 +13,24 @@ export default function start(state = {}, action) {
 		});
 	break;	
 
+	case 'START_PROFILE':
+		return Object.assign({}, state, {
+			loadingprofile:action.loading
+		})
+	break;
+
+	case 'END_PROFILE':
+		return Object.assign({}, state, {
+			loadingprofile:action.loading
+		})
+	break;
+
+	case 'RENDER_PROFILE':
+		return Object.assign({}, state, {
+			profile:action.profile
+		})
+	break;
+
     default:
 		return state;
   }

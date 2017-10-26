@@ -44,7 +44,7 @@ export function session(values) {
 */
 
 export function login(values) {
-	
+	console.log(values);
   return (dispatch) => {
 
   		if(values.password == '123456' && values.email=='cipiklevis@gmail.com'){
@@ -80,19 +80,28 @@ export function login(values) {
 }
 
 
-export function profile(values) {
+export function loadProfile(values) {
 	
   return (dispatch) => {
-
+  			//BEFORE CALL API
+			dispatch({
+				type: 'START_PROFILE',
+				loading:true
+		 	});
 
 			dispatch({
-				type: 'CANCEL_SESSION',
-				
+				type: 'RENDER_PROFILE',
 				profile: {
 					name:'Klevis Cipi',
 					email:'cipiklevis@gmail.com',
 					description:"This is my profile"
 				}
+		 	});
+
+  			//AFTER CALL API
+			dispatch({
+				type: 'END_PROFILE',
+				loading:false
 		 	});
 
   };

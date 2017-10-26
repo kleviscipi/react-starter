@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import {ValidateSingle} from '../helpers/Validate.js'
 import Messages from '../helpers/Messages.js'
 import {login} from '../../actions/start.js'
+import { Route, Redirect } from 'react-router'
 
 class Login extends React.Component{
 	constructor(props){
@@ -36,8 +37,11 @@ class Login extends React.Component{
 
 		this.props.dispatch(login({values}))
 	}
-	componentWillReceivePops(nextProps){
+	componentWillReceivePops(next){
 		
+		if(next.logged){
+			<Redirect to="/home/profile/1"/>
+		}
 	}
 	onLogged(){
 		const {messages} = this.props
