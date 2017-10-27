@@ -30,7 +30,7 @@
     "build-css": "node-sass-chokidar src/assets/scss/style.scss -o src/assets/css/",
     "watch-css": "npm run build-css && node-sass-chokidar src/assets/scss/style.scss -o src/assets/css/ --watch ",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js ",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

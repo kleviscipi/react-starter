@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
 import AlertContainer from 'react-alert';
+import {clearMsg} from '../../actions/start.js'
 /**********************************************/
 //<Messages  messages={this.props.messages} newalert={false}/>
 
@@ -31,14 +33,17 @@ class Messages extends React.Component {
   newAlert(){
    
     if(this.props.messages !=="undefined"){
+
         if(this.props.messages.success){
-            this.props.messages.success.map( (message, i) => this.showAlert('fa text-success fa-check',message) )  
+            this.props.messages.success.map( (message, i) => this.showAlert('fa text-success fa-check',message) )
+            this.props.dispatch(clearMsg())  
         }else if(this.props.messages.error){
-            this.props.messages.error.map( (message, i) => this.showAlert('fa text-success fa-times',message) )  
+            this.props.messages.error.map( (message, i) => this.showAlert('fa text-success fa-times',message) )
+            this.props.dispatch(clearMsg())    
         }else if(this.props.messages.info){
-            this.props.messages.info.map( (message, i) => this.showAlert('fa text-success fa-times',message) )  
+            this.props.messages.info.map( (message, i) => this.showAlert('fa text-success fa-times',message) )
+            this.props.dispatch(clearMsg())    
         }
-    
     }   
 
   }
@@ -66,4 +71,11 @@ class Messages extends React.Component {
 
 }
 
-export default Messages;
+
+const mapStateToProps = (state) => {
+  return {
+
+  };
+};
+
+export default connect(mapStateToProps)(Messages);

@@ -47,7 +47,11 @@ export function login(values) {
 	console.log(values);
   return (dispatch) => {
 
-  		if(values.password == '123456' && values.email=='cipiklevis@gmail.com'){
+		dispatch({
+			type: 'CLEAR_MESSAGES',
+	 	});
+
+  		if(values.password.trim() == '123456' && values.email.trim()=='cipiklevis@gmail.com'){
 
 			dispatch({
 				type: 'LOGIN_SUCCESS',
@@ -58,6 +62,7 @@ export function login(values) {
 				type: 'SUCCESS_MESSAGES',
 				messages: ['Logged successfully']
 		 	});
+  		
   		}else{
 
 			dispatch({
@@ -69,9 +74,7 @@ export function login(values) {
 				type: 'ERROR_MESSAGES',
 				messages: ['Email or password wrong!']
 		 	});
-		dispatch({
-			type: 'CLEAR_MESSAGES',
-	 	});
+			
   		}
 
 
@@ -106,9 +109,19 @@ export function loadProfile(values) {
 
   };
   
-}
+};
 
 
+export function clearMsg(){
+	
+  return (dispatch) => {
+  		console.log("ok")
+		dispatch({
+			type: 'CLEAR_MESSAGES',
+	 	});
+
+  };	
+};
 
 
 

@@ -8,12 +8,19 @@ class Home extends React.Component{
 		return(
 			<div className="jumbotron">
 			  	<h1 className="display-3">Bootstrap 4 and React Mvc!</h1>
-			  	<p className="lead">This is a starter project with react and boostrap 4</p>
+			  	<p className="lead">This is a starter project with React 16 and boostrap 4 </p>
 			  	<hr className="my-4"/>
-			  	<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+			  	
 			  	<p className="lead">
-			    	<a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+			    	<a className="btn btn-primary btn-lg" href="getbootstrap.com" role="button">Learn More Boorstrap</a>
+			    	<br/>
+			    	<br/>
+			    	<a className="btn btn-info btn-lg" href="https://reactjs.org/" role="button">Learn More React</a>
 			  	</p>
+
+			  	<p>For installing:</p>
+
+			  	<p></p>
 			</div>
 		);
 	}

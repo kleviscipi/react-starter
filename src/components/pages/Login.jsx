@@ -35,28 +35,21 @@ class Login extends React.Component{
 			password:this.state.password,
 		}
 
-		this.props.dispatch(login({values}))
+		this.props.dispatch(login(values))
 	}
-	componentWillReceivePops(next){
-		
-		if(next.logged){
-			<Redirect to="/home/profile/1"/>
-		}
-	}
-	onLogged(){
-		const {messages} = this.props
 
-		if(messages){
-			return(<Messages messages={messages}/>)
-		}
+	componentWillReceiveProps(nextProps) {
 
 	}
+
 	render(){
 
 		return(
 			<div className="container" style={{marginTop:'50px'}} >
 
-				{this.onLogged()}
+				<Messages messages={this.props.messages}/>
+
+				{this.props.logged ? <Redirect to="/app/profile/1"/> : (null)}
 
 				<div className="my-login">
 					<div className="row">
@@ -89,6 +82,15 @@ class Login extends React.Component{
 						    </div>
 						  </div>
 						</form>
+					</div>
+					<div className="row">
+							<div className="col-lg-12 text-center">
+
+								<code> Email: cipiklevis@gmail.com </code>
+
+								<code> Password: 123456 </code>
+
+							</div>
 					</div>					
 				</div>
 			</div>
