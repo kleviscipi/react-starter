@@ -8,7 +8,7 @@ class Footer extends React.Component {
 		return (
 			<footer className="footer bg-dark">
 				<div className="container">
-					<span className="text-muted">Footer Here</span>
+					<span className="text-muted">B&R 2017 </span>
 				</div>
 			</footer>
 		);

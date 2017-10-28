@@ -82,6 +82,66 @@ export function login(values) {
   
 }
 
+export function singUp(values){
+
+	let valids = {
+		password    : "Password is empty",  
+		email 		:'Email is empty ',
+		username 	:"Username is empty",
+		name 		:'Name is empty',
+		subname 	:'Subname is empty',
+
+	};
+
+  return (dispatch) => {
+
+		dispatch({
+			type: 'CLEAR_MESSAGES',
+	 	});
+		let e = 0;
+		let messages = [];
+		Object.keys(values).map((r)=>{
+
+			console.log(r);
+
+			if( values[r] == "" ){
+
+				dispatch({
+					type: 'SINGUP_FALURE',
+					singup: false
+			 	});
+				messages.push(valids[r]) ;
+			}else{
+				e++;
+			}
+		});
+
+		dispatch({
+			type: 'ERROR_MESSAGES',
+			messages: messages
+	 	});
+
+		if(e == Object.keys(values).length){
+			
+			dispatch({
+				type: 'SUCCESS_MESSAGES',
+				messages: ['Singup successfully.']
+		 	});	
+			setTimeout(function(){
+
+			dispatch({
+				type: 'SINGUP_SUCCESS',
+				singup: true
+		 	});	
+
+			},1000)
+
+		}
+
+
+  };
+
+}
 
 export function loadProfile(values) {
 	
@@ -122,6 +182,3 @@ export function clearMsg(){
 
   };	
 };
-
-
-

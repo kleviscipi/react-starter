@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import {ValidateSingle} from '../helpers/Validate.js'
 import Messages from '../helpers/Messages.js'
@@ -72,13 +73,15 @@ class Login extends React.Component{
 						    </div>
 						  </div>
 						  <div className="form-group row">
-						  	<div className="col-sm-10"></div>
-						    <div className="col-sm-2">
-						      <button type="button" className="btn btn-primary float-right" onClick={this.handleSubmit}>
+						  	<div className="col-sm-6"></div>
+						    <div className="col-sm-6">
+						      	<button type="button" className="btn btn-success float-right" onClick={this.handleSubmit}>
 						      	
-						      	Sign in
+						      		Sign in
 
-						      </button>
+						      	</button>
+						       	<Link to="/app" type="submit" className="btn btn-warning float-right" style={{marginRight:'5px'}}>Home</Link>	
+						      	<Link to="/singup" type="submit" className="btn btn-primary float-right" style={{marginRight:'5px'}}>Sing Up</Link>	
 						    </div>
 						  </div>
 						</form>

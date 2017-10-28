@@ -13,6 +13,18 @@ export default function start(state = {}, action) {
 		});
 	break;	
 
+	case 'SINGUP_FALURE':
+		return Object.assign({}, state, {
+			singup:action.singup
+		});
+	break;	
+
+	case 'SINGUP_SUCCESS':
+		return Object.assign({}, state, {
+			singup:action.singup
+		});
+	break;	
+
 	case 'START_PROFILE':
 		return Object.assign({}, state, {
 			loadingprofile:action.loading

@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {loadProfile} from '../../../actions/start.js'
+import Messages 	from '../../helpers/Messages.js'
 
 class Profile extends React.Component{
 	constructor(props){
@@ -29,6 +30,7 @@ class Profile extends React.Component{
 
 		return(
 			<div className="container" >
+				<Messages messages={this.props.messages}/>
 				{
 					loadingprofile == false ?
 				        <main role="main" className="col-sm-12 ml-sm-auto col-md-12 pt-3">
@@ -55,7 +57,8 @@ class Profile extends React.Component{
 const mapStateToProps = (state) => {
 	return {
 		loadingprofile:state.start.loadingprofile,
-		user:state.start.profile
+		user:state.start.profile,
+		messages:state.messages
 	};
 };
 

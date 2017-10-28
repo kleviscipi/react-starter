@@ -33,6 +33,7 @@ export const createRoutes = () => {
 				},
 				{	
 					path:'/',
+					exact:true,
 					component: Component.Pages.Login,				
 				},
 				{	
