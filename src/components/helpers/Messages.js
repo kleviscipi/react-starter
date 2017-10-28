@@ -27,7 +27,7 @@ class Messages extends React.Component {
       this.msg.show(message, {
         time: this.time,
         type: 'success',
-        icon: <i className={class_name}></i>
+        icon: class_name
       });
   }
   newAlert(){
@@ -35,38 +35,22 @@ class Messages extends React.Component {
     if(this.props.messages !=="undefined"){
 
         if(this.props.messages.success){
-            this.props.messages.success.map( (message, i) => this.showAlert('fa text-success fa-check',message) )
+            this.props.messages.success.map( (message, i) => this.showAlert(':)',message) )
             this.props.dispatch(clearMsg())  
         }else if(this.props.messages.error){
-            this.props.messages.error.map( (message, i) => this.showAlert('fa text-success fa-times',message) )
+            this.props.messages.error.map( (message, i) => this.showAlert(':(',message) )
             this.props.dispatch(clearMsg())    
         }else if(this.props.messages.info){
-            this.props.messages.info.map( (message, i) => this.showAlert('fa text-success fa-times',message) )
+            this.props.messages.info.map( (message, i) => this.showAlert(':)',message) )
             this.props.dispatch(clearMsg())    
         }
     }   
 
   }
-  oldAlert(){
 
-    return this.props.messages.success ? (
-          <div role="alert" className="alert alert-success">
-            {this.props.messages.success.map((message, i) => <div key={i}>{message}</div>)}
-          </div>
-        ) : this.props.messages.error ? (
-          <div role="alert" className="alert alert-danger">
-            {this.props.messages.error.map((message, i) => <div key={i}>{message}</div>)}
-          </div>
-        ) : this.props.messages.info ? (
-          <div role="alert" className="alert alert-info">
-            {this.props.messages.info.map((message, i) => <div key={i}>{message}</div>)}
-          </div>
-        ) : null; 
-        
-  }
   render(){
     this._new_alert==true ? this.newAlert() : null;
-    return this._new_alert ==true ? (<div><AlertContainer ref={(a) => this.msg = a} {...this.alertOptions} /></div>) :  this.oldAlert();
+    return this._new_alert ==true ? (<div><AlertContainer ref={(a) => this.msg = a} {...this.alertOptions} /></div>) :  null;
   }
 
 }

@@ -7,7 +7,7 @@ class Home extends React.Component{
 		
 		return(
 			<div className="jumbotron container">
-			  	<h1 className="display-3">Bootstrap 4 and React Mvc!</h1>
+			  	<h1 className="display-3">Bootstrap 4, React!</h1>
 			  	<p className="lead">This is a starter project with React 16 and boostrap 4 </p>
 			  	<hr className="my-4"/>
 			  	
@@ -40,6 +40,9 @@ class Home extends React.Component{
 						  
 			  		
 			  	</p>
+
+			  	<h3>Structure</h3>
+			  	<img src="/images/structure.png" />
 			</div>
 		);
 	}
