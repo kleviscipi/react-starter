@@ -1,4 +1,4 @@
-## React Starter with bootstrap
+## React Starter with bootstrap 4
 
 This project is for starting app with a nice structure, and without webpack config
 
