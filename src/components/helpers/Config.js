@@ -2,6 +2,6 @@ export const Config = {
 	
 	author:{
 		fullname:'KLevis Cipi',
-		repositoryLink:'github',
+		repositoryLink:'https://github.com/kleviscipi/react-starter.git',
 	}
 };
