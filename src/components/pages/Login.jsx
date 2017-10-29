@@ -50,7 +50,7 @@ class Login extends React.Component{
 
 				<Messages messages={this.props.messages}/>
 
-				{this.props.logged ? <Redirect to="/app/profile/1"/> : (null)}
+				{this.props.logged ? <Redirect to="/react-starter-deploy/app/profile/1"/> : (null)}
 
 				<div className="my-login">
 					<div className="row">
@@ -80,8 +80,8 @@ class Login extends React.Component{
 						      		Sign in
 
 						      	</button>
-						       	<Link to="/app" type="submit" className="btn btn-warning float-right" style={{marginRight:'5px'}}>Home</Link>	
-						      	<Link to="/singup" type="submit" className="btn btn-primary float-right" style={{marginRight:'5px'}}>Sing Up</Link>	
+						       	<Link to="/react-starter-deploy/app" type="submit" className="btn btn-warning float-right" style={{marginRight:'5px'}}>Home</Link>	
+						      	<Link to="/react-starter-deploy/singup" type="submit" className="btn btn-primary float-right" style={{marginRight:'5px'}}>Sing Up</Link>	
 						    </div>
 						  </div>
 						</form>

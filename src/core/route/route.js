@@ -12,18 +12,27 @@ export const getRouteData = (location) => {
 export const createRoutes = () => {
 	return [
 				{ 
-					path:'/app',
+					path:'/react-starter-deploy',
 					component: Component.Layout.App,
 					routes:[
 							{
 								component: Component.Pages.Home,
-								path: '/app',
+								path: '/react-starter-deploy',
 								exact:true,
 
 							},
-						    { 	path: '/app/profile/:id',
+						    { 	path: '/react-starter-deploy/profile/:id',
 						        component:Component.Module.Users.Profile,
 						    },
+							{	
+								path:'/react-starter-deploy/login',
+								exact:true,
+								component: Component.Pages.Login,				
+							},
+							{
+								path:'/react-starter-deploy/singup',
+								component: Component.Pages.Singup,
+							},
 							{
 								component: Component.Pages.NotFound
 							},
@@ -31,19 +40,7 @@ export const createRoutes = () => {
 					]
 
 				},
-				{	
-					path:'/',
-					exact:true,
-					component: Component.Pages.Login,				
-				},
-				{	
-					path:'/login',
-					component: Component.Pages.Login,				
-				},
-				{
-					path:'/singup',
-					component: Component.Pages.Singup,
-				},
+
 
 				{
 					component: Component.Pages.NotFound

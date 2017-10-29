@@ -15,16 +15,16 @@ class Header extends React.Component {
 				  <div className="collapse navbar-collapse" id="navbarSupportedContent">
 				    <ul className="navbar-nav mr-auto">
 				      <li className="nav-item active">
-				        <a className="nav-link" href="/app">Home <span className="sr-only">(current)</span></a>
+				        <a className="nav-link" href="/react-starter-deploy/app">Home <span className="sr-only">(current)</span></a>
 				      </li>
 				      <li className="nav-item">
-				        <Link to='/login' className="nav-link" href="#">Login</Link>
+				        <Link to='/react-starter-deploy/login' className="nav-link" href="#">Login</Link>
 				      </li>
 				      <li className="nav-item">
-				        <Link to='/singup' className="nav-link" href="#">Sing Up</Link>
+				        <Link to='/react-starter-deploy/singup' className="nav-link" href="#">Sing Up</Link>
 				      </li>
 				      <li className="nav-item">
-				        <a className="nav-link" href="/app">Github <span className="sr-only">(current)</span></a>
+				        <a className="nav-link" href="https://github.com/kleviscipi/react-starter">Github <span className="sr-only">(current)</span></a>
 				      </li>
 				    </ul>
 				    <form className="form-inline my-2 my-lg-0">

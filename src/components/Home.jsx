@@ -23,9 +23,9 @@ class Home extends React.Component{
 			  	<p>Before clone the respository <code>{"git clone " + Config.author.repositoryLink}</code></p>
 			  	<p><code>npm install</code> : for installing alla packages</p>
 			  	<p><code>npm start</code>: start app</p>
-			  	<p>Route to home page <code>/app</code></p>
-			  	<p>Route to login page <code>/login</code></p>
-			  	<p>Route to singup page <code>/singup</code> , this is just a simulation of singup</p>
+			  	<p>Route to home page <code>/react-starter-deploy/app</code></p>
+			  	<p>Route to login page <code>/react-starter-deploy/login</code></p>
+			  	<p>Route to singup page <code>/react-starter-deploy/singup</code> , this is just a simulation of singup</p>
 			  	<p>For configurations i use just the react-scripts and if you want to change the configurations go to <code>package.json</code></p>
 			  	<br/>
 			  	<p>
@@ -42,7 +42,7 @@ class Home extends React.Component{
 			  	</p>
 
 			  	<h3>Structure</h3>
-			  	<img src="/images/structure.png" />
+			  	<img src="/react-starter-deploy/images/structure.png" />
 			</div>
 		);
 	}

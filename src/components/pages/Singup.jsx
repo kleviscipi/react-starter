@@ -53,7 +53,7 @@ class Singup extends React.Component{
 			<div className="container" style={{marginTop:'50px'}} >
 				<Messages messages={this.props.messages}/>
 				
-				{this.props.singup ? <Redirect to="/app/profile/1"/> : (null)}
+				{this.props.singup ? <Redirect to="/react-starter-deploy/app/profile/1"/> : (null)}
 
 				<div className="my-login">
 					<div className="row">
@@ -95,8 +95,8 @@ class Singup extends React.Component{
 						  	<div className="col-sm-6"></div>
 						    <div className="col-sm-6">
 						      	<button type="button" onClick={this.handleSubmit} th className="btn btn-success float-right">Sing Up</button>
-						      	<Link to="/login" type="submit" className="btn btn-primary float-right" style={{marginRight:'5px'}}>Sing In</Link>	
-						    	<Link to="/app" type="submit" className="btn btn-warning float-right" style={{marginRight:'5px'}}>Home</Link>	
+						      	<Link to="/react-starter-deploy/login" type="submit" className="btn btn-primary float-right" style={{marginRight:'5px'}}>Sing In</Link>	
+						    	<Link to="/react-starter-deploy/app" type="submit" className="btn btn-warning float-right" style={{marginRight:'5px'}}>Home</Link>	
 						    </div>
 						  </div>
 						</form>

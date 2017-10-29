@@ -13,9 +13,9 @@ This project is for starting app with a nice structure, and without webpack conf
 
 The route links:
 
-`http://localhost:3000/app`
-`http://localhost:3000/login`
-`http://localhost:3000/singup`
+`http://localhost:3000/react-starter-deploy/app`
+`http://localhost:3000/react-starter-deploy/login`
+`http://localhost:3000/react-starter-deploy/singup`
 
 
 This app use react scripts for build and deploy and if you want to configure your custom goto to `package.json`
